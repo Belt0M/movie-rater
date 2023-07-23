@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie List Application</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <header>
+    <h1>Movie-rater Application</h1>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search movies...">
+      <button id="search-button">Search</button>
+    </div>
+  </header>
+  <main>
+    <div id="movie-list" class="movie-list"></div>
+    <div id="pagination" class="pagination">
+
+    </div>
+  </main>
+  <div id="movie-details" class="movie-details">
+    <button id="close-button" class="close-button"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <footer>
+    <span>All rights reserved ®</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

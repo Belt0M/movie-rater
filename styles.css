@@ -1,0 +1,302 @@
+/* Reset default margin and padding for consistency */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+* {
+	box-sizing: border-box;
+}
+/* Set a base font size and font family */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	background-color: #030303;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+}
+
+/* Header styles */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 2.5rem 10rem;
+	margin-bottom: 5rem;
+	background-color: #363636;
+	color: #fff;
+	text-align: left;
+}
+
+header h1 {
+	color: whitesmoke;
+	align-self: center;
+	margin-left: 2rem;
+}
+
+/* Search container styles */
+.search-container {
+	display: flex;
+	align-items: center;
+	background-color: #f9f9f9;
+	border-radius: 1rem;
+}
+.search-container input {
+	flex: 1;
+	padding: 0.9rem 0.8rem 0.8rem 0.8rem;
+	font-size: 16px;
+	border: none;
+	border-radius: 20px; /* Rounded edges */
+	background-color: #f9f9f9;
+	outline: none;
+	width: 300px;
+}
+
+.search-container input::placeholder {
+	color: #999; /* Placeholder text color */
+}
+
+.search-container button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 20px; /* Rounded edges */
+	margin-left: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+	background-color: #0056b3;
+}
+
+.search-container button:hover {
+	background-color: #0056b3;
+}
+
+/* Main styles */
+main {
+	padding: 0 4rem;
+}
+
+/* Movie list styles */
+.movie-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 20px;
+}
+
+/* Movie item styles */
+.movie-list > div {
+	display: flex;
+	align-items: center;
+	position: relative;
+	height: 22rem;
+	width: 15rem;
+	border-radius: 0.6rem;
+	padding: 10px;
+	cursor: pointer;
+	transition: transform 0.3s;
+	background-color: #222222;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(99, 99, 99, 1);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(99, 99, 99, 1);
+	box-shadow: 0px 0px 15px 0px rgb(150, 150, 150);
+	text-align: center;
+}
+
+.movie-list > div:hover {
+	transform: scale(1.03);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(99, 99, 99, 1);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(99, 99, 99, 1);
+	box-shadow: 0px 0px 10px 0px rgb(150, 150, 150);
+}
+
+.movie-list > div h3 {
+	opacity: 0;
+	color: #f0f0f0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	transition: 0.5s;
+}
+
+.movie-list > div:hover h3 {
+	opacity: 1;
+}
+
+.movie-list img {
+	border-radius: 0.6rem;
+	max-width: 100%;
+	height: auto;
+	transition: 0.25s;
+}
+
+.movie-list > div:hover img {
+	opacity: 0.5;
+}
+
+/* Pagination styles */
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 6rem;
+	margin-bottom: 20px;
+}
+
+.pagination button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	margin: 0 5px;
+	font-size: 16px;
+	background-color: transparent;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.pagination i {
+	color: #fff;
+	padding: 1rem;
+	transition: background-color 0.3s;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.pagination button:hover {
+	background-color: #bc11bc78;
+}
+
+.pagination i:hover {
+	transform: scale(1.1);
+}
+
+.movie-details {
+	display: none;
+	border: 0.1rem solid #bc11bc;
+	padding: 20px;
+	background-color: rgb(37, 37, 37);
+	color: #f0f0f0;
+	width: 80%; /* Adjust the width as needed */
+	max-width: 400px; /* Limit the maximum width of the movie details container */
+	margin: 0 auto; /* Center the container horizontally */
+	position: fixed;
+	top: 50%; /* Center the container vertically */
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(190, 32, 198, 1);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(190, 32, 198, 1);
+	box-shadow: 0px 0px 15px 0px rgba(190, 32, 198, 1);
+}
+
+/* Show movie details when it's active */
+.movie-details.active {
+	display: block;
+}
+
+.movie-details h2 {
+	padding: 2.5rem 0 1.6rem 0;
+}
+
+.movie-details p {
+	font-weight: bold;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0.5rem 0;
+}
+
+.movie-details .close-button {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	background-color: transparent;
+	color: #fff;
+	font-size: 1rem;
+	cursor: pointer;
+	border: none;
+	transition: 0.2s;
+}
+
+.movie-details .close-button:hover {
+	transform: scale(1.1);
+}
+
+.movie-details p span {
+	font-weight: normal;
+	padding-left: 1rem;
+	text-align: end;
+	width: 60%;
+}
+
+/* User rating styles */
+.user-rating {
+	display: flex;
+
+	flex-direction: column;
+}
+.user-rating > div {
+	display: flex;
+	flex-direction: column;
+}
+
+.user-rating span {
+	cursor: pointer;
+	margin-right: 5px;
+	font-size: 24px;
+	color: #ffd700; /* Golden yellow */
+}
+
+.user-rating textarea {
+	width: 100%;
+	flex: 1;
+	margin: 10px 0;
+	padding: 10px;
+	font-size: 16px;
+	resize: vertical;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.user-rating button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #940fab;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+.user-rating button:hover {
+	background-color: #ab19bb;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	color: #949494;
+	padding: 2rem;
+	background-color: #292929;
+	margin-top: 6rem;
+}
